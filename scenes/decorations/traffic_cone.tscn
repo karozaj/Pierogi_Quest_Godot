@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://drilxhx8qtneb"]
+
+[ext_resource type="PackedScene" uid="uid://djaa5ltbvejfn" path="res://assets/3d_models/traffic_cone.glb" id="1_ucvsx"]
+
+[node name="traffic_cone" instance=ExtResource("1_ucvsx")]
+
+[node name="cone" parent="traffic_cone2" index="0"]
+collision_layer = 8
+collision_mask = 3

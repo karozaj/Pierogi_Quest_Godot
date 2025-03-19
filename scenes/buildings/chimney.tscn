@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://buvslklhwtuuu"]
+
+[ext_resource type="PackedScene" uid="uid://etjxvuvh6ta3" path="res://assets/3d_models/chimney.glb" id="1_aanrm"]
+[ext_resource type="Material" uid="uid://burhfv4fl8rjg" path="res://materials/chimney.tres" id="2_p3veq"]
+[ext_resource type="Script" path="res://scripts/chimney.gd" id="2_sq7kj"]
+
+[node name="chimney" instance=ExtResource("1_aanrm")]
+script = ExtResource("2_sq7kj")
+
+[node name="chimney" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_p3veq")
+
+[node name="StaticBody3D" parent="chimney" index="0"]
+collision_layer = 8
+collision_mask = 3

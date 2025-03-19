@@ -1,0 +1,12 @@
+[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://br548wqrysw7p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjgbt"]
+albedo_color = Color(0.761719, 0.355469, 0.164063, 1)
+billboard_mode = 2
+point_size = 52.0
+
+[resource]
+lightmap_size_hint = Vector2i(2, 2)
+material = SubResource("StandardMaterial3D_tjgbt")
+size = Vector2(0.1, 0.1)
+orientation = 2

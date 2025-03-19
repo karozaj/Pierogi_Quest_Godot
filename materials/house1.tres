@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cr05xm5ovgo3n"]
+
+[ext_resource type="Texture2D" uid="uid://chyb6a6dbxkbr" path="res://assets/images/house1_house1_texture.png" id="1_dykil"]
+
+[resource]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_dykil")
+texture_filter = 2

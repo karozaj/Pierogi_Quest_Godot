@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c4nck7ncm6wau"]
+
+[ext_resource type="Texture2D" uid="uid://dmss8ubsfpc04" path="res://assets/images/car_nitw_car.png" id="1_7x2lv"]
+
+[resource]
+resource_name = "Material.001"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_7x2lv")
+texture_filter = 2

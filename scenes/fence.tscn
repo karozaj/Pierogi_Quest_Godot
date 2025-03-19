@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvwtyjinmm7we"]
+
+[ext_resource type="PackedScene" uid="uid://cdef8bxf1c01n" path="res://assets/3d_models/fence.glb" id="1_x0fxp"]
+
+[node name="fence" instance=ExtResource("1_x0fxp")]
+
+[node name="fence" parent="fence2" index="0"]
+collision_layer = 8
+collision_mask = 3

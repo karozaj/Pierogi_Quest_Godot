@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://6qscyhlans5m"]
+
+[ext_resource type="PackedScene" uid="uid://b0x0e23hmjnes" path="res://assets/3d_models/trashcan.glb" id="1_x2868"]
+[ext_resource type="Script" path="res://scripts/trashcan.gd" id="2_kqxrx"]
+[ext_resource type="Material" uid="uid://bvaoy7715d4gl" path="res://materials/trashcan.tres" id="3_areah"]
+[ext_resource type="AudioStream" uid="uid://curfo7g4uf04q" path="res://assets/sound/trashcan.ogg" id="3_rnn5f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m7he2"]
+size = Vector3(0.405, 0.1, 0.295)
+
+[node name="trashcan" instance=ExtResource("1_x2868")]
+script = ExtResource("2_kqxrx")
+
+[node name="trashcan2" parent="." index="0"]
+surface_material_override/0 = ExtResource("3_areah")
+
+[node name="trashcan" parent="trashcan2" index="0"]
+collision_layer = 8
+collision_mask = 3
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1"]
+stream = ExtResource("3_rnn5f")
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(0.697503, 0, -0.716582, 0, 1, 0, 0.716582, 0, 0.697503, 0, 0.920362, -0.0181255)
+shape = SubResource("BoxShape3D_m7he2")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

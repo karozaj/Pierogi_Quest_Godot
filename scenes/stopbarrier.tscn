@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6acqo3242psl"]
+
+[ext_resource type="PackedScene" uid="uid://bj2wv0aqa2683" path="res://assets/3d_models/stopbarrier.glb" id="1_08wqv"]
+
+[node name="stopbarrier" instance=ExtResource("1_08wqv")]
+
+[node name="stopbarrier" parent="stopbarrier2" index="0"]
+collision_layer = 8
+collision_mask = 3

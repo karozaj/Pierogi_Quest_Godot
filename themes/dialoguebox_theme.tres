@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b24pf43lywji"]
+
+[ext_resource type="FontFile" uid="uid://3vm0ljjva7bc" path="res://assets/fonts/IndieFlower-Regular.ttf" id="1_0xv88"]
+[ext_resource type="StyleBox" uid="uid://m3uopiv0udyw" path="res://themes/dialoguebox_boxstyle.tres" id="1_qejjs"]
+
+[resource]
+default_font = ExtResource("1_0xv88")
+Label/colors/font_outline_color = Color(0.301961, 0.301961, 0.301961, 1)
+Label/constants/outline_size = 3
+Label/font_sizes/font_size = 27
+Label/styles/normal = ExtResource("1_qejjs")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy3iix8803bmm"]
+
+[ext_resource type="PackedScene" uid="uid://lfar5ksyse3y" path="res://assets/3d_models/tree4.glb" id="1_6bjrl"]
+[ext_resource type="Material" uid="uid://c8erx7wom3ovb" path="res://materials/tree.tres" id="2_d3r6i"]
+
+[node name="tree4" instance=ExtResource("1_6bjrl")]
+
+[node name="tree42" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_d3r6i")
+surface_material_override/1 = ExtResource("2_d3r6i")
+
+[node name="tree4" parent="tree42" index="0"]
+collision_layer = 16

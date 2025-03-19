@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b85en3lb10yr8"]
+
+[ext_resource type="Texture2D" uid="uid://ooaw77y3c8ld" path="res://assets/images/road_texture.png" id="1_uyuf0"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r5myg"]
+size = Vector2(10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_perql"]
+albedo_texture = ExtResource("1_uyuf0")
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fee2r"]
+size = Vector3(10, 0, 10)
+
+[node name="road" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_r5myg")
+surface_material_override/0 = SubResource("StandardMaterial3D_perql")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_fee2r")

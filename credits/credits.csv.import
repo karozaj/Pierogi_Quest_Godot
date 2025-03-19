@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c7lmxcosqqxjm"
+
+[deps]
+
+files=["res://credits/credits.Creator.translation", "res://credits/credits.Link.translation", "res://credits/credits.Type.translation"]
+
+source_file="res://credits/credits.csv"
+dest_files=["res://credits/credits.Creator.translation", "res://credits/credits.Link.translation", "res://credits/credits.Type.translation"]
+
+[params]
+
+compress=true
+delimiter=0

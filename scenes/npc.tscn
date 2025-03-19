@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://sensnmoux5qp"]
+
+[ext_resource type="PackedScene" uid="uid://b2f1txesw1i2i" path="res://scenes/character_voice.tscn" id="1_5wg43"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_hv5r6"]
+[ext_resource type="PackedScene" uid="uid://8p4n0pgwjgj" path="res://scenes/ui/3d_textbox.tscn" id="3_tkcqy"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4aoc8"]
+radius = 2.5
+
+[node name="npc" type="Node3D"]
+script = ExtResource("1_hv5r6")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_4aoc8")
+
+[node name="CharacterVoice" parent="." instance=ExtResource("1_5wg43")]
+
+[node name="TextboxMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="3d_textbox" parent="TextboxMarker" instance=ExtResource("3_tkcqy")]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

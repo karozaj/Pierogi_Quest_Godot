@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://h77op1nm6r31"]
+
+[ext_resource type="PackedScene" uid="uid://do68nk1ecghjb" path="res://assets/3d_models/porch.glb" id="1_rsuy3"]
+[ext_resource type="Material" uid="uid://vrhqpdgpbf8j" path="res://materials/porch.tres" id="2_o53du"]
+[ext_resource type="Script" path="res://scripts/porch.gd" id="2_oyvh8"]
+
+[node name="porch" instance=ExtResource("1_rsuy3")]
+script = ExtResource("2_oyvh8")
+
+[node name="porch2" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_o53du")
+
+[node name="porch" parent="porch2" index="0"]
+collision_layer = 8
+collision_mask = 3

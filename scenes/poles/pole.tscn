@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7m5xkt8kv8m4"]
+
+[ext_resource type="PackedScene" uid="uid://gg3xr8m3qisu" path="res://assets/3d_models/pole.glb" id="1_jcmvp"]
+[ext_resource type="Material" uid="uid://cu1eh6qociym4" path="res://materials/pole.tres" id="2_f4el1"]
+
+[node name="pole" instance=ExtResource("1_jcmvp")]
+
+[node name="pole" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_f4el1")
+
+[node name="StaticBody3D" parent="pole" index="0"]
+collision_layer = 16

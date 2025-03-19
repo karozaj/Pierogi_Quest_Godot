@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://u1knnl87qs83"]
+
+[ext_resource type="Texture2D" uid="uid://cuwyrb5telhoo" path="res://assets/images/postbox_postbox_texture.png" id="1_rbtmw"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_rbtmw")
+texture_filter = 0

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://j5wfu2aivhky"]
+
+[ext_resource type="PackedScene" uid="uid://2ys83e87bc64" path="res://assets/3d_models/garage.glb" id="1_8awhg"]
+[ext_resource type="Script" path="res://scripts/garage.gd" id="2_tay1t"]
+[ext_resource type="Material" uid="uid://qb5pxdvnqcpk" path="res://materials/garage1.tres" id="2_u0n4a"]
+
+[node name="garage" instance=ExtResource("1_8awhg")]
+script = ExtResource("2_tay1t")
+
+[node name="garage" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_u0n4a")
+
+[node name="StaticBody3D" parent="garage" index="0"]
+collision_layer = 8
+collision_mask = 3

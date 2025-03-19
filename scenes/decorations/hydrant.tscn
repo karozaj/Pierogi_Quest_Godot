@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://biiylg1up15rh"]
+
+[ext_resource type="PackedScene" uid="uid://crp81ru4fotb2" path="res://assets/3d_models/hydrant.glb" id="1_gdsre"]
+
+[node name="hydrant" instance=ExtResource("1_gdsre")]
+
+[node name="hydrant" parent="hydrant2" index="0"]
+collision_layer = 8
+collision_mask = 3

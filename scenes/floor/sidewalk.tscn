@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://07qvnn8bmnis"]
+
+[ext_resource type="PackedScene" uid="uid://4lpmj6qmqgo8" path="res://assets/3d_models/sidewalk.glb" id="1_0d8i6"]
+[ext_resource type="Material" uid="uid://cv32nk1w2kehx" path="res://materials/sidewalk.tres" id="2_0kkpw"]
+
+[node name="sidewalk" instance=ExtResource("1_0d8i6")]
+
+[node name="sidewalk2" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_0kkpw")
+
+[node name="sidewalk" parent="sidewalk2" index="0"]
+collision_layer = 4
+collision_mask = 3

@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://x66iu4c0n4xy"]
+
+[ext_resource type="PackedScene" uid="uid://cv1yhauj1rdif" path="res://assets/3d_models/car_nitw.glb" id="1_avpx6"]
+[ext_resource type="Script" path="res://scripts/car.gd" id="2_70jc0"]
+[ext_resource type="Material" uid="uid://c4nck7ncm6wau" path="res://materials/car_green.tres" id="3_cp5mh"]
+[ext_resource type="AudioStream" uid="uid://cqfh4ra6pi6h0" path="res://assets/sound/car_creaking.ogg" id="4_a4441"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jpue8"]
+size = Vector3(1.42, 0.2, 0.885)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tiphi"]
+size = Vector3(1.32, 0.2, 0.855)
+
+[node name="car_nitw" instance=ExtResource("1_avpx6")]
+script = ExtResource("2_70jc0")
+
+[node name="car" parent="Armature/car" index="0"]
+collision_layer = 8
+collision_mask = 3
+
+[node name="car" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("3_cp5mh")
+
+[node name="FrontSuspensionArea" type="Area3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00557363, 0.830444, 1.09334)
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontSuspensionArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0311481, 0)
+shape = SubResource("BoxShape3D_jpue8")
+
+[node name="BackSuspensionArea" type="Area3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00557363, 1.77311, -0.172136)
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackSuspensionArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0311481, -0.0498447)
+shape = SubResource("BoxShape3D_tiphi")
+
+[node name="AudioStreamPlayer3DFront" type="AudioStreamPlayer3D" parent="." index="4"]
+stream = ExtResource("4_a4441")
+
+[node name="AudioStreamPlayer3DBack" type="AudioStreamPlayer3D" parent="." index="5"]
+stream = ExtResource("4_a4441")
+
+[connection signal="body_entered" from="FrontSuspensionArea" to="." method="_on_front_suspension_area_body_entered" flags=18]
+[connection signal="body_entered" from="BackSuspensionArea" to="." method="_on_back_suspension_area_body_entered" flags=18]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnsw1b12e8ldw"]
+
+[ext_resource type="Texture2D" uid="uid://dghh1eb2sv8hk" path="res://assets/images/grass_texture.png" id="1_lvwsw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8l1gx"]
+albedo_texture = ExtResource("1_lvwsw")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_coovf"]
+lightmap_size_hint = Vector2i(52, 52)
+material = SubResource("StandardMaterial3D_8l1gx")
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sn1to"]
+size = Vector3(10, 0, 10)
+
+[node name="grass" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_coovf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_sn1to")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bvaoy7715d4gl"]
+
+[ext_resource type="Texture2D" uid="uid://dt5ugdfnuee6y" path="res://assets/3d_models/trashcan_trashcan_texture.png" id="1_q4gfr"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_q4gfr")
+texture_filter = 0

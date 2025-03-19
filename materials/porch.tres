@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://vrhqpdgpbf8j"]
+
+[ext_resource type="Texture2D" uid="uid://cvttddvfurdx6" path="res://assets/images/porch_texture.png" id="1_t1th4"]
+
+[resource]
+albedo_texture = ExtResource("1_t1th4")
+texture_filter = 0

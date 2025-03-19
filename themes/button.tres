@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cmsgngv6nf2b"]
+
+[ext_resource type="FontFile" uid="uid://3vm0ljjva7bc" path="res://assets/fonts/IndieFlower-Regular.ttf" id="1_tmjgq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7khyf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bux8k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk5ac"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e0wyi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gy4g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcj0o"]
+bg_color = Color(1, 0.913725, 0.454902, 1)
+
+[resource]
+default_font = ExtResource("1_tmjgq")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 0.501961)
+Button/colors/font_hover_color = Color(1, 0.913725, 0.454902, 1)
+Button/colors/font_outline_color = Color(0.301961, 0.301961, 0.301961, 1)
+Button/constants/outline_size = 3
+Button/font_sizes/font_size = 25
+Button/styles/disabled = SubResource("StyleBoxEmpty_7khyf")
+Button/styles/focus = SubResource("StyleBoxEmpty_bux8k")
+Button/styles/hover = SubResource("StyleBoxEmpty_jk5ac")
+Button/styles/normal = SubResource("StyleBoxEmpty_e0wyi")
+Button/styles/pressed = SubResource("StyleBoxEmpty_7gy4g")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_pcj0o")
+Label/colors/font_outline_color = Color(0.301961, 0.301961, 0.301961, 1)
+Label/constants/outline_size = 3
+Label/font_sizes/font_size = 25

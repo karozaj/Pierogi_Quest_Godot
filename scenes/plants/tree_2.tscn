@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce8db7nhpqh0n"]
+
+[ext_resource type="PackedScene" uid="uid://wycdywq0t3nl" path="res://assets/3d_models/tree2.glb" id="1_ri314"]
+[ext_resource type="Material" uid="uid://c8erx7wom3ovb" path="res://materials/tree.tres" id="2_xdu0h"]
+
+[node name="tree2" instance=ExtResource("1_ri314")]
+
+[node name="tree2" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_xdu0h")
+
+[node name="StaticBody3D" parent="tree2" index="0"]
+collision_layer = 16

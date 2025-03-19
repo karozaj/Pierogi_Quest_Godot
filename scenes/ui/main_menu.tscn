@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3x14mrdx07i5"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ewnx5"]
+[ext_resource type="Theme" uid="uid://cmsgngv6nf2b" path="res://themes/button.tres" id="1_o1s1e"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ewnx5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -61.0
+offset_right = 59.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_o1s1e")
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_o1s1e")
+theme_override_font_sizes/font_size = 40
+text = "CREDITS"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]

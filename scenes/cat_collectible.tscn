@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb2b0c0gbo304"]
+
+[ext_resource type="PackedScene" uid="uid://bw4oui6noynuy" path="res://assets/3d_models/cat.glb" id="1_j1xdj"]
+[ext_resource type="Script" path="res://scripts/cat_collectible.gd" id="2_oc73d"]
+[ext_resource type="AudioStream" uid="uid://c0gicp8ai73c7" path="res://assets/sound/cat_purr.ogg" id="3_apglb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4y4l2"]
+size = Vector3(0.715, 0.64, 0.69)
+
+[node name="cat_collectible" instance=ExtResource("1_j1xdj")]
+script = ExtResource("2_oc73d")
+
+[node name="Cylinder" parent="." index="0"]
+transform = Transform3D(1.505, 0, 0, 0, 1.505, 0, 0, 0, 1.505, 0, 0.75, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+stream = ExtResource("3_apglb")
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.820027, 0)
+collision_layer = 64
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.96778e-05, 0)
+shape = SubResource("BoxShape3D_4y4l2")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

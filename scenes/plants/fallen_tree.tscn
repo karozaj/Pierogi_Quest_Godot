@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds72ecxa1kno5"]
+
+[ext_resource type="PackedScene" uid="uid://qvlhujrxab1p" path="res://assets/3d_models/fallen_tree.glb" id="1_21fal"]
+
+[node name="fallen_tree" instance=ExtResource("1_21fal")]
+
+[node name="StaticBody3D" parent="fallentree" index="0"]
+collision_layer = 8
+collision_mask = 3

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://caix4mlyvo11f"]
+
+[ext_resource type="PackedScene" uid="uid://0vmp8ytcgf23" path="res://assets/3d_models/dumpster.glb" id="1_jke6m"]
+[ext_resource type="Script" path="res://scripts/dumpster.gd" id="2_wmfap"]
+[ext_resource type="AudioStream" uid="uid://curfo7g4uf04q" path="res://assets/sound/trashcan.ogg" id="3_v7pep"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5b7a"]
+size = Vector3(1.075, 0.205, 1.98)
+
+[node name="dumpster" instance=ExtResource("1_jke6m")]
+script = ExtResource("2_wmfap")
+
+[node name="StaticBody3D" parent="dumpster" index="0"]
+collision_layer = 8
+collision_mask = 3
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6287, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(0.958805, 0.284066, 0, -0.284066, 0.958805, 0, 0, 0, 1, 0.0623854, 0.00323653, 0.0179598)
+shape = SubResource("BoxShape3D_h5b7a")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2"]
+stream = ExtResource("3_v7pep")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

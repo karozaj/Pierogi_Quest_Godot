@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd78lji0i7kij"]
+
+[ext_resource type="PackedScene" uid="uid://865ojau0ke4b" path="res://assets/3d_models/house2.glb" id="1_2sooh"]
+[ext_resource type="Material" uid="uid://cqfxrdrvbhg2d" path="res://materials/maehouse.tres" id="2_7hyfh"]
+[ext_resource type="Script" path="res://scripts/house_2.gd" id="2_j3ut2"]
+
+[node name="house2" instance=ExtResource("1_2sooh")]
+script = ExtResource("2_j3ut2")
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_7hyfh")
+
+[node name="StaticBody3D" parent="Cube" index="0"]
+collision_layer = 8
+collision_mask = 3

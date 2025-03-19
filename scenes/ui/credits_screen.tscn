@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://cywe1lx4ewmkm"]
+
+[ext_resource type="Theme" uid="uid://cmsgngv6nf2b" path="res://themes/button.tres" id="1_1dj6j"]
+[ext_resource type="Script" path="res://scripts/credits_screen.gd" id="1_y6twx"]
+
+[node name="credits_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y6twx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Credits" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_1dj6j")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Music:
+\"Soporific\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+Font:
+Indie Flower by Kimberly Geswein
+
+Sound effects:
+Heavy metal dungeon door creak, squeak 3 by ZapSplat
+Rustling.wav by 13FPanska_Machacova_Petra
+Right Gravel Footstep 1 by Ali_6868
+Right Gravel Footstep 2 by Ali_6868
+Right Gravel Footstep 4 by Ali_6868
+Metal thud.WAV by JonCon_Library
+Footsteps_Mountain_Boots_Rock_Jump_Sequence_Mono.wav by Nox_Sound
+Small metal bucket swinging by melle_teich
+Game Pickup by IENBA
+Coin Pickup SFX [1] by SoundDesignForYou
+Cat_Twit1.wav by steffcaffrey
+"
+
+[node name="ReturnButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("1_1dj6j")
+text = "RETURN"
+
+[connection signal="pressed" from="VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]

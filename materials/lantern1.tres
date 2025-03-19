@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://hwsnqdpay4qa"]
+
+[ext_resource type="Texture2D" uid="uid://b47s52ed8ga6i" path="res://assets/images/lantern_texture.png" id="1_e365g"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_e365g")
+texture_filter = 0
